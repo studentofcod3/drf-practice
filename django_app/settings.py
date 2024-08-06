@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'api',
     # Needed for shell_plus
     'django_extensions',
+    # Swagger
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -116,6 +118,11 @@ USE_I18N = True
 
 USE_TZ = True
 
+LOGIN_REDIRECT_URL = '/swagger'
+SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False,
+    'SECURITY_DEFINITIONS': None,
+}
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
